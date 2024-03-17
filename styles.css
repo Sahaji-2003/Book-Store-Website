@@ -1,0 +1,162 @@
+/* Styles for Bookstore Website */
+
+body {
+  background-color: rgb(180, 246, 183);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #0adb50;
+  color: #ddede1;
+  padding: 10px;
+  box-shadow: 2px 2px 15px #0c2026;
+}
+
+header h1{
+  box-shadow: 1px 1px 3px #0c2026;
+  align-self: center;
+  border-radius: 15px;
+  background-color: #13971e;
+  text-align: center;
+  text-rendering: 1px 1px 2px rgb(4, 18, 4);
+  text-shadow: 1px 1px 3px rgb(5, 40, 5);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fdfbfb;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+}
+
+#featured-book-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+#bookapp input {
+   padding-left: 13px;
+   padding-left: 12px;
+   background-color: #98e0f6;
+   border-radius: 20px;
+   border: 4px solid #23acbe;
+   width: 310px;
+   height:20px;
+   box-shadow: 2px 2px 4px black;
+   font-size: medium;
+   font-style: oblique;
+   font-weight: bold;
+}
+.cart button{
+  font: inherit;
+  cursor: pointer;
+  border: 5px solid #620375;
+  background-color: #1be50d;
+  color: #5e0370;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  border-radius: 20px;
+  margin: 0 1rem;
+  box-shadow: 2px 2px 2px black;
+  width: 310px;
+  animation: both;
+  
+  /* Set initial styles */
+  transition: transform 0.5s ease;
+
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 5px solid #620375;
+  background-color: #9a0de5;
+  color: #e0fce6;
+  padding: 0.05rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  border-radius: 20px;
+  margin: 0 1rem;
+  box-shadow: 2px 2px 2px black;
+  width: 100px;
+  animation: both;
+  /* Set initial styles */
+  transition: transform 0.5s ease;
+}
+
+button:active {
+  /* Apply styles when the button is clicked */
+  transform: scale(0.75);
+}
+
+.book {
+  background-color: rgb(109, 253, 253);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px solid #76d3e8;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 3px 3px 6px black;
+  height: 350px;
+}
+
+.book img {
+  width: 190px;
+  height: 290px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px #0c2026;
+}
+
+.book h3 {
+  margin: 0;
+}
+
+.book p {
+  margin: 5px 0;
+  font-style: italic;
+}
+
+.show_out{
+  width:350px;
+  height:50px;
+  background-color: #0adb50;
+  border: 2px solid rgb(16, 176, 75);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 5px #0c2026;
+}
+
+#form2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
