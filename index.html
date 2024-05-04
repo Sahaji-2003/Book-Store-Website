@@ -5,13 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookstore Website</title>
-  <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="https://unpkg.com/vue@next" defer></script>
-    <script src="app.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -31,31 +28,48 @@
   <main>
     <section id="bookapp">
       <div class="cart">
-      <h2>Featured Books   <button> Books In cart {{counter}} </button> </h2>
+        <h2>Featured Books <button> Books In cart : </button> </h2>
       </div>
-      
-          <div id="featured-book-details">
-            <div class="book">
-              <img src="book-cover1.jpg" alt="Book Cover">
-              <h3>Title 1</h3>
-              <p>Author 1</p><br>
-              <button v-on:click="add(1)"> <h3>ADD</h3> </button>
-            </div>
-            <div class="book">
-              <img src="book-cover2.jpg" alt="Book Cover">
-              <h3>Title 2</h3>
-              <p>Author 2</p><br>
-              <button v-on:click="add(1)"> <h3>ADD</h3> </button>
-            </div>
-          </div>
-          <br><br>
-        </section>
+
+      <div id="featured-book-details">
+        <div class="book">
+          <img src="book-cover1.jpg" alt="Book Cover">
+          <h3>Title 1</h3>
+          <p>Author 1</p><br>
+          <button v-on:click="incrementCounter"><h3>ADD</h3></button>
+        </div>
+        <div class="book">
+          <img src="book-cover2.jpg" alt="Book Cover">
+          <h3>Title 2</h3>
+          <p>Author 2</p><br>
+          <button v-on:click="incrementCounter"><h3>ADD</h3></button>
+        </div>
+      </div>
+      <br><br>
+    </section>
   </main>
-   
+
   <footer>
     <p>&copy; 2023 Bookstore. All rights reserved.</p>
+    <p>&copy; Made by Sahaji</p>
   </footer>
 
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          counter: 0
+        };
+      },
+      methods: {
+        incrementCounter() {
+          this.counter++;
+        }
+      }
+    });
+  
+    const vm = app.mount('#bookapp');
+  </script>
 </body>
 
 </html>
